@@ -1,6 +1,7 @@
 clear
 %%membaca File dan Meresize
-I = imread ('sawah1.JPG');
+ui = uigetfile(
+I = imread ('../*.JPG');
 i = imresize(I, [281 500]);
 
 %%Memisahkan Citra Menjadi 3 Layer (Red Green Blue)
