@@ -1,6 +1,6 @@
 clear all;
 %%membaca File dan Meresize
-I = imread ('../sawah1.JPG');
+I = imread ('../hijau.JPG');
 i = imresize(I, [281 500]);
 
 %%Memisahkan Citra Menjadi 3 Layer (Red Green Blue)
@@ -21,23 +21,23 @@ figure, imshow (S);
 figure, imshow (V);
 
 % % %%rata2 HSV
-mh = mean(mean(H))
-ms = mean(mean(S))
-mv = mean(mean(V))
+mh = mean(mean(H));
+ms = mean(mean(S));
+mv = mean(mean(V));
 
 %% Varian data 
 varH = var(var(H));
 varS = var(var(S));
 varV = var(var(V));
 % %%rata2 RGB
-% mr = mean(mean(R));
-% mg = mean(mean(G));
-% mb = mean(mean(B));
+mr = mean(mean(R));
+mg = mean(mean(G));
+mb = mean(mean(B));
 % 
 % %%Mengubah citra menjadi citra merah hijau biru
-% Red = cat(3,R,G*0,B*0);
-% Green = cat(3,R*0,G,B*0);
-% Blue = cat(3,R*0,G*0,B);
+%  Red = cat(3,R,G*0,B*0);
+%  Green = cat(3,R*0,G,B*0);
+%  Blue = cat(3,R*0,G*0,B);
 
 % %% Mengubah Citra menjadi citra H S V
 % Hue = cat(3,H,S*0,V*0);
@@ -50,16 +50,16 @@ varV = var(var(V));
 % subplot(2,2,4); imshow(rgbtohsv); title('Citra hsv');
 % 
 % figure(2);
-% subplot(2,2,1); imshow(Red); title('Citra Merah');
-% subplot(2,2,2); imshow(Green); title('Citra Hijau');
-% subplot(2,2,3); imshow(Blue); title('Citra Biru');
+%  subplot(2,2,1); imshow(Red); title('Citra Merah');
+%  subplot(2,2,2); imshow(Green); title('Citra Hijau');
+%  subplot(2,2,3); imshow(Blue); title('Citra Biru');
 % 
 % figure(3);
 % subplot(3,2,1); imshow(H); title('Citra Hue');
 % subplot(3,2,2); imshow(S); title('Citra Saturation');
 % subplot(3,2,3); imshow(V); title('Citra Value');
 % 
-% xlswrite('Citra H.xlsx', H);
+% xlswri    te('Citra H.xlsx', H);
 % xlswrite('Citra R.xlsx', R);
 % xlswrite('Citra G.xlsx', G);
 % xlswrite('Citra B.xlsx', B);

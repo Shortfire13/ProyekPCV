@@ -1,4 +1,4 @@
-function varargout = GLCM(varargin)
+    function varargout = GLCM(varargin)
 % GLCM MATLAB code for GLCM.fig
 %      GLCM, by itself, creates a new GLCM or raises the existing
 %      singleton*.

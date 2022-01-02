@@ -83,7 +83,7 @@ function popupmenu1_Callback(hObject, eventdata, handles)
 %        contents{get(hObject,'Value')} returns selected item from popupmenu1
 randnumb = str2double(get(handles.edit1,'String'))
 popupvalue = get(handles.popupmenu1,'value');
-
+    
 if(popupvalue == 1)
     cla reset
     M = zeros(randnumb,2);
